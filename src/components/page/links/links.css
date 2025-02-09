@@ -1,0 +1,18 @@
+.linksWrapper {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	margin-top: 20px;
+}
+
+.links__link {
+
+	padding: 10px;
+	background-color: rgba(112, 0, 0, 0.507);
+	border-radius: 20px;
+	border: 1px solid#00000077;
+}
+
+.links__link.active {
+	background-color: rgba(255, 251, 0, 0.514);
+}
