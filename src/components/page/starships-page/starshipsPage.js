@@ -39,7 +39,7 @@ const StarshipsPage = () => {
 		<div className="pageContentWrapper">
 			<div className="sitebar">
 				<ol>
-					{data.map((el) => <li className="pageContent__li"><NavLink to="#" onClick={() => handleStarshipsClick(el)}>{el.name}</NavLink></li>)}
+					{data.map((el) => <li key={el.name} className="pageContent__li"><NavLink to="#" onClick={() => handleStarshipsClick(el)}>{el.name}</NavLink></li>)}
 				</ol >
 			</div>
 			<div className="mainBlock">

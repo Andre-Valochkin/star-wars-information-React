@@ -1,10 +1,8 @@
 import "./filmsPage.css";
-// import FilmDetails from "./film-details/filmDetails.js";
+import FilmDetails from "./film-details/filmDetails";
 
 import { useEffect, useState } from 'react';
 import { NavLink } from "react-router-dom";
-import FilmDetails from "./film-details/filmDetails";
-
 
 const FilmsPage = () => {
 	const [data, setData] = useState([]);
@@ -30,27 +28,29 @@ const FilmsPage = () => {
 
 	if (loading) {
 		return <div className="loader"><div className="runner"></div></div>
-	}
-
-	const handleFilmClick = (film) => {
-		setSelectedFilm(film);
 	};
 
 	return (
 		<div className="pageContentWrapper">
 			<div className="sitebar">
 				<ol>
-					{data.map((el) => <li className="pageContent__li"><NavLink to="#" onClick={() => handleFilmClick(el)}>{el.title}</NavLink></li>)}
+					{data.map((el) => <li key={el.episode_id} className="pageContent__li"><NavLink to="#" onClick={() => setSelectedFilm(el)}>{el.title}</NavLink></li>)}
 				</ol >
 			</div>
 			<div className="mainBlock">
-				{selectedFilm ? (<FilmDetails {...selectedFilm} />) : (<h2>Выберите фильм для отображения деталей</h2>)}
+				{selectedFilm ? <FilmDetails {...selectedFilm} /> : <h2>Выберите фильм для отображения деталей</h2>}
 			</div>
 		</div >
 	);
-}
+};
 
 export default FilmsPage;
+
+
+
+
+
+
 
 
 

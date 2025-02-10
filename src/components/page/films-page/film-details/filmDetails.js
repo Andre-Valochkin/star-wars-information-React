@@ -1,7 +1,5 @@
-import "./filmDetails.css";
 
 const FilmDetails = ({ title, episode_id, opening_crawl, director, producer, release_date }) => {
-
 	return (
 		<div className="detailsWrapper">
 			<ul className="details__list">
@@ -14,6 +12,6 @@ const FilmDetails = ({ title, episode_id, opening_crawl, director, producer, rel
 			</ul>
 		</div>
 	);
-}
+};
 
 export default FilmDetails;

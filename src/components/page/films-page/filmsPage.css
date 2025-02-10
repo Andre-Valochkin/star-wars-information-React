@@ -1,3 +1,14 @@
+.details__list {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.list__elem span {
+	color: brown;
+	font-weight: 900;
+}
+
 .pageContentWrapper {
 	display: flex;
 }
